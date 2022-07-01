@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include('./partials/head.ejs') %>
+<body>
+    <div class="container">
+        
+            <% if(users.length > 0) { %> 
+                <% for(user in users) { %>
+                    <div class="content">
+                        <h3 class="title">
+                            <%=users[user].firstName %> <%=users[user].lastName %>
+                        </h3>
+                        <p>
+                            <%=users[user].email %>
+                        </p>
+                    </div>
+                <% } %> 
+            <% } else { %>
+                <p>Não há usuários para exibir...</p>
+            <% } %>
+    </div>
+</body>
+</html>
